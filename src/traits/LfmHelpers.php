@@ -63,7 +63,8 @@ trait LfmHelpers
      */
     public function getFileUrl($image_name = null, $is_thumb = null)
     {
-        return url($this->composeSegments('url', $is_thumb, $image_name));
+        // return url($this->composeSegments('url', $is_thumb, $image_name));
+        return $this->composeSegments('url', $is_thumb, $image_name);
     }
 
     /**
@@ -113,7 +114,7 @@ trait LfmHelpers
         //     $prefix = config('lfm.url_prefix', config('lfm.prefix', 'laravel-filemanager')) . '/' . $prefix;
         // }
         if ($type === 'url' && config('lfm.urls_prefix')) {
-            $prefix = config('lfm.urls_prefix') . '/' . $prefix;
+            $prefix = config('lfm.view_prefix') . '/' . $prefix;
         }
 
         return $prefix;
