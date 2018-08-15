@@ -113,7 +113,7 @@ trait LfmHelpers
         // if ($type === 'url' && $base_directory !== 'public') {
         //     $prefix = config('lfm.url_prefix', config('lfm.prefix', 'laravel-filemanager')) . '/' . $prefix;
         // }
-        if ($type === 'url' && config('lfm.urls_prefix')) {
+        if ($type === 'url' && config('lfm.url_prefix')) {
             $prefix = config('lfm.view_prefix') . '/' . $prefix;
         }
 
